@@ -2,12 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "Networking",
-        "repositoryURL": "https://github.com/pprokopowicz/Networking.git",
+        "package": "NetworkKit",
+        "repositoryURL": "https://github.com/pprokopowicz/NetworkKit.git",
         "state": {
           "branch": null,
-          "revision": "9e2692dbdabe8e7a741af215c20d9e5c92029018",
-          "version": "0.1.0"
+          "revision": "8f89820fff6648819b797ae62e6afae2b30db582",
+          "version": "0.6.0"
         }
       }
     ]

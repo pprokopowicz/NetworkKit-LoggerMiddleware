@@ -1,5 +1,5 @@
 import XCTest
-@testable import NetworkingLoggerPlugin
+@testable import NetworkLoggerMiddleware
 
 final class NetworkingLoggerPluginTests: XCTestCase {
     

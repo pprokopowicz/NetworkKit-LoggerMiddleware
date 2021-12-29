@@ -1,30 +1,32 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "NetworkingLoggerPlugin",
+    name: "NetworkLoggerMiddleware",
     platforms: [
         .iOS(.v13),
-        .macOS(.v10_15)
+        .macOS(.v10_15),
+        .watchOS(.v6),
+        .tvOS(.v13)
     ],
     products: [
         .library(
-            name: "NetworkingLoggerPlugin",
-            targets: ["NetworkingLoggerPlugin"]),
+            name: "NetworkLoggerMiddleware",
+            targets: ["NetworkLoggerMiddleware"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/pprokopowicz/Networking.git", from: "0.0.1")
+        .package(url: "https://github.com/pprokopowicz/NetworkKit.git", from: "0.6.0")
     ],
     targets: [
         .target(
-            name: "NetworkingLoggerPlugin",
+            name: "NetworkLoggerMiddleware",
             dependencies: [
-                .product(name: "Networking", package: "Networking")
+                .product(name: "NetworkKit", package: "NetworkKit")
             ]),
         .testTarget(
-            name: "NetworkingLoggerPluginTests",
-            dependencies: ["NetworkingLoggerPlugin"]),
+            name: "NetworkLoggerMiddlewareTests",
+            dependencies: ["NetworkLoggerMiddleware"]),
     ]
 )
